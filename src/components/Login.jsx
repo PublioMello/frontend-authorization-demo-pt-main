@@ -5,7 +5,7 @@ import "./styles/Login.css";
 
 const Login = ({ handleLogin }) => {
   const [data, setData] = useState({
-    username: "",
+    email: "",
     password: "",
   });
 
@@ -29,13 +29,13 @@ const Login = ({ handleLogin }) => {
         ou registre-se para acessar o CryptoDucks.
       </p>
       <form className="login__form" onSubmit={handleSubmit}>
-        <label htmlFor="username">Login:</label>
+        <label htmlFor="email">Login:</label>
         <input
-          id="username"
+          id="email"
           required
-          name="username"
-          type="text"
-          value={data.username}
+          name="email"
+          type="email"
+          value={data.email}
           onChange={handleChange}
         />
         <label htmlFor="password">Senha:</label>
